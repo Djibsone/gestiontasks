@@ -63,18 +63,10 @@
                             </span>
                             <span class="nav-link-text">Déconnexion</span>
                         </a>
-
-                        
                     </li>
-
-
                 </ul>
-                
             </nav>
         </div>
-        
-
     </div>
-    
 </div>
 

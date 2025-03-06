@@ -106,8 +106,6 @@
     </div>
 
     <script src="{{ asset('assets/js/jquery3-6-0.js') }}"></script>
-    {{-- <script src="{{ asset('assets/dataTables-b5.min.js') }}"></script>
-    <script src="{{ asset('assets/jquery-dataTables-bs5.min.js') }}"></script> --}}
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 
