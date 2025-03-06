@@ -144,7 +144,7 @@
                     info: "Affichage de _START_ à _END_ sur _TOTAL_ entrées",
                     infoEmpty: "Aucune entrée trouvée",
                     infoFiltered: "(filtré de _MAX_ entrées au total)",
-                    zeroRecords: "Aucun résultat trouvé",
+                    zeroRecords: "Aucune tâche trouvée",
                     emptyTable: "Aucune donnée disponible dans le tableau",
                     paginate: {
                         previous: "Précédent",
