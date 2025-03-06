@@ -41,7 +41,7 @@
                                 sont obligatoires.</p>
                         </em>
 
-                        <button type="submit" class="btn btn-primary mt-4" id="submitButton">
+                        <button type="submit" class="btn btn-primary mt-4 text-white" id="submitButton">
                             <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
                             Enregistrer la tâche
                         </button>

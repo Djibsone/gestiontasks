@@ -13,9 +13,6 @@
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
     <link rel="shortcut icon" href="favicon.ico">
 
-    <!-- FontAwesome JS-->
-    <script defer src="{{ asset('assets/plugins/fontawesome/js/all.min.js') }}"></script>
-
     <!-- App CSS -->
     <link id="theme-style" rel="stylesheet" href="{{ asset('assets/css/portal.css') }}">
     <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
@@ -46,6 +43,8 @@
 
 
 
+    <!-- FontAwesome JS-->
+    <script defer src="{{ asset('assets/plugins/fontawesome/js/all.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/popper.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
