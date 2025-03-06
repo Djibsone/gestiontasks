@@ -97,6 +97,11 @@ $dechiffre = decryptData($chiffre);
 echo "Texte déchiffré : " . $dechiffre;
 ```
 
+### **Dans le fichier .env**
+```
+ENCRYPTION_KEY=VotreCleALibreArbitre // La clé est peut-être Q123r$é... par example, mais doit être exactement 32 caractères pour être compatible avec `aes-256-cbc`.
+```
+
 ---
 
 ## Fonctionnalités
