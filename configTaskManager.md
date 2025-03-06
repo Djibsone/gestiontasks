@@ -59,6 +59,8 @@ php artisan migrate
 Si vous souhaitez insérer des données de test, exécutez :
 ```bash
 php artisan db:seed
+
+## Les identifiants de connexion sont `admin@admin.fr` et `password123`, avec deux tâche créées.
 ```
 
 ### 8. **Exécutez le serveur**
