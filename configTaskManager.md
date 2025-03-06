@@ -60,10 +60,20 @@ Si vous souhaitez insérer des données de test, exécutez :
 ```bash
 php artisan db:seed
 
-## Les identifiants de connexion sont `admin@admin.fr` et `password123`, avec deux tâche créées.
+## Les identifiants de connexion sont `admin@admin.fr` et `password123`, avec deux tâches créées.
 ```
 
-### 8. **Exécutez le serveur**
+### 8. **Installez les dépendances front-end (si nécessaire)**
+```bash
+npm install  # ou yarn install
+```
+
+### 9. **Compilez les fichiers front-end (si nécessaire)**
+```bash
+npm run dev  # ou npm run build pour la production
+```
+
+### 10. **Exécutez le serveur**
 ```bash
 php artisan serve
 ```
