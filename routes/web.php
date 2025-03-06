@@ -23,6 +23,7 @@ Route::prefix('/taches')->name('tasks.')->middleware('auth')->controller(TaskCon
     Route::get('/', 'index')->name('dashboard');
     Route::get('/create', 'show')->name('show');
     Route::post('/create', 'store')->name('store');
+    Route::put('/complete{task}', 'complete')->name('complete');
     Route::get('/edit/{id}', 'edit')->name('edit');
     Route::put('/edit/{task}', 'update')->name('update');
     Route::delete('destroy/{id}', 'destroy')->name('destroy');

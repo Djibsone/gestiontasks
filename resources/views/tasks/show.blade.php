@@ -30,7 +30,7 @@
                             <select class="form-control" name="status" id="status">
                                 <option>-- Sélectionnez --</option>
                                 <option value="pending">En attente</option>
-                                <option value="completed" selected>Valide</option>
+                                <option value="completed">Terminée</option>
                             </select>
                         </div>
                         @error('status')

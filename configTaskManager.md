@@ -106,7 +106,7 @@ ENCRYPTION_KEY=VotreCleALibreArbitre // La clé est peut-être Q123r$é... par e
 
 ## Fonctionnalités
 ✅ Inscription et connexion des utilisateurs.  
-✅ Ajout, modification et suppression des tâches.  
+✅ Ajout, modification, marquer comme complété et suppression des tâches.  
 ✅ Chiffrement des données sensibles.  
 
 ---

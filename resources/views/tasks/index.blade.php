@@ -16,7 +16,7 @@
             <div class="app-card app-card-settings shadow-sm p-4">
                 <div class="app-card-body">
                     <h2>Mes Tâches</h2>
-                    <a href="{{ route('tasks.store') }}" class="btn btn-success mb-3">Ajouter une Tâche</a>
+                    <a href="{{ route('tasks.store') }}" class="btn btn-info mb-3 text-white">Ajouter une nouvelle tâche</a>
                     <div class="row g-4 mb-4">
                         <table class="table table-bordered">
                             <thead>
@@ -39,12 +39,21 @@
                                             <span
                                                 class="badge 
                                         {{ $task->status === 'completed' ? 'bg-success' : 'bg-warning text-dark' }}">
-                                                {{ $task->status === 'completed' ? 'Terminé' : 'En attente' }}
+                                                {{ $task->status === 'completed' ? 'Tâche terminée' : 'Tâche en attente' }}
                                             </span>
                                         </td>
 
                                         <td class="text-center">
                                             <a href="{{ route('tasks.edit', encryptData($task->id)) }}" class="btn btn-warning">Modifier</a>
+                                            @if ($task->status === 'completed')
+                                                {{-- <span class="badge bg-success">Tâche complétée</span> --}}
+                                            @else
+                                                <form action="{{ route('tasks.complete', $task) }}" method="POST" class="d-inline">
+                                                    @csrf
+                                                    @method('PUT')
+                                                    <button type="submit" class="btn btn-success btn-sm">Marquer comme complétée</button>
+                                                </form>
+                                            @endif
                                             <button type="button" class="btn btn-danger delete-task"
                                                 data-id="{{ encryptData($task->id) }}"
                                                 data-name="{{ $task->title }}">Supprimer</button>

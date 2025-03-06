@@ -32,7 +32,7 @@
                             <select class="form-control" name="status" id="status">
                                 <option>-- Sélectionnez --</option>
                                 <option value="pending" @selected(old('status', $task->status) == 'pending')>En attente</option>
-                                <option value="completed" @selected(old('status', $task->status) == 'completed')>Valide</option>
+                                <option value="completed" @selected(old('status', $task->status) == 'completed')>Terminée</option>
                             </select>
                         </div>
                         @error('status')

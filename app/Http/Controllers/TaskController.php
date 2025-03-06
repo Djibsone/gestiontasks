@@ -140,6 +140,30 @@ class TaskController extends Controller
         }
     }
 
+    public function complete(Task $task)
+    {
+        try {
+            $this->authorize('update', $task);
+            $task->update([
+                'status' => 'completed',
+            ]);
+
+            return to_route('tasks.dashboard')->with([
+                'message' => [
+                    'type' => 'success',
+                    'text' => 'La tâche a été complétée avec succès.',
+                ],
+            ]);
+        } catch (\Exception $e) {
+            return back()->with([
+                'message' => [
+                    'type' => 'danger',
+                    'text' => 'Une erreur est survenue lors de la mise à jour de la tâche.',
+                ],
+            ]);
+        }
+    }
+
     /**
      * Supprime une tâche.
      *

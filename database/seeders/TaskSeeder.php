@@ -39,7 +39,7 @@ class TaskSeeder extends Seeder
             'title' => 'Ma deuxième tâche',
             'description' => 'Créer quelques tâches pour tester le projet.',
             'user_id' => $admin->id,
-            'status' => 'completed',
+            'status' => 'pending',
         ]);
     }
 }
