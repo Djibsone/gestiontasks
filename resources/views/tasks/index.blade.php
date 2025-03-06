@@ -46,7 +46,7 @@
 
                                             <td class="text-center">
                                                 <a href="{{ route('tasks.edit', encryptData($task->id)) }}"
-                                                    class="btn btn-warning">Modifier</a>
+                                                    class="btn btn-warning mb-2">Modifier</a>
                                                 @if ($task->status === 'completed')
                                                     {{-- <span class="badge bg-success">Tâche complétée</span> --}}
                                                 @else
@@ -54,7 +54,7 @@
                                                         class="d-inline">
                                                         @csrf
                                                         @method('PUT')
-                                                        <button type="submit" class="btn btn-success btn-sm">Marquer comme
+                                                        <button type="submit" class="btn btn-success btn-sm mb-2">Marquer comme
                                                             complétée</button>
                                                     </form>
                                                 @endif
