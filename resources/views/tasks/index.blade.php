@@ -45,33 +45,29 @@
                                             </td>
 
                                             <td class="text-center">
-                                                <div class="d-flex flex-column gap-2">
-                                                    <a href="{{ route('tasks.edit', encryptData($task->id)) }}"
-                                                        class="btn btn-warning">Modifier</a>
-
-                                                    @if ($task->status === 'completed')
-                                                        {{-- <span class="badge bg-success">Tâche complétée</span> --}}
-                                                    @else
-                                                        <form action="{{ route('tasks.complete', $task) }}" method="POST"
-                                                            class="d-inline">
-                                                            @csrf
-                                                            @method('PUT')
-                                                            <button type="submit" class="btn btn-success btn-sm">Marquer
-                                                                comme
-                                                                complétée</button>
-                                                        </form>
-                                                    @endif
-
-                                                    <button type="button" class="btn btn-danger delete-task"
-                                                        data-id="{{ encryptData($task->id) }}"
-                                                        data-name="{{ $task->title }}">Supprimer</button>
-                                                </div>
+                                                <a href="{{ route('tasks.edit', encryptData($task->id)) }}"
+                                                    class="btn btn-warning mb-2 mb-lg-0">Modifier</a>
+                                                @if ($task->status === 'completed')
+                                                    {{-- <span class="badge bg-success">Tâche complétée</span> --}}
+                                                @else
+                                                    <form action="{{ route('tasks.complete', $task) }}" method="POST"
+                                                        class="d-inline">
+                                                        @csrf
+                                                        @method('PUT')
+                                                        <button type="submit"
+                                                            class="btn btn-success btn-sm mb-2 mb-lg-0">Marquer comme
+                                                            complétée</button>
+                                                    </form>
+                                                @endif
+                                                <button type="button" class="btn btn-danger delete-task mb-2 mb-lg-0"
+                                                    data-id="{{ encryptData($task->id) }}"
+                                                    data-name="{{ $task->title }}">Supprimer</button>
                                             </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
+                            </table>
                         </div>
-                        </table>
                     </div>
                 </div>
             </div>
