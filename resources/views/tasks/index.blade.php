@@ -18,49 +18,54 @@
                     <h2>Mes Tâches</h2>
                     <a href="{{ route('tasks.store') }}" class="btn btn-info mb-3 text-white">Ajouter une nouvelle tâche</a>
                     <div class="row g-4 mb-4">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>TITRE</th>
-                                    <th>DESCRIPTION</th>
-                                    <th class="text-center">DATE DE CREATION</th>
-                                    <th class="text-center">STATUT</th>
-                                    <th class="text-center">ACTIONS</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($tasks as $task)
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
                                     <tr>
-                                        <td>{{ ucfirst($task->title) }}</td>
-                                        <td>{{ $task->description }}</td>
-                                        <td class="text-center">{{ date('d-m-Y, H:s:i', strtotime($task->created_at)) }}
-                                        </td>
-                                        <td class="text-center">
-                                            <span
-                                                class="badge 
-                                        {{ $task->status === 'completed' ? 'bg-success' : 'bg-warning text-dark' }}">
-                                                {{ $task->status === 'completed' ? 'Tâche terminée' : 'Tâche en attente' }}
-                                            </span>
-                                        </td>
-
-                                        <td class="text-center">
-                                            <a href="{{ route('tasks.edit', encryptData($task->id)) }}" class="btn btn-warning">Modifier</a>
-                                            @if ($task->status === 'completed')
-                                                {{-- <span class="badge bg-success">Tâche complétée</span> --}}
-                                            @else
-                                                <form action="{{ route('tasks.complete', $task) }}" method="POST" class="d-inline">
-                                                    @csrf
-                                                    @method('PUT')
-                                                    <button type="submit" class="btn btn-success btn-sm">Marquer comme complétée</button>
-                                                </form>
-                                            @endif
-                                            <button type="button" class="btn btn-danger delete-task"
-                                                data-id="{{ encryptData($task->id) }}"
-                                                data-name="{{ $task->title }}">Supprimer</button>
-                                        </td>
+                                        <th>TITRE</th>
+                                        <th>DESCRIPTION</th>
+                                        <th class="text-center">DATE DE CREATION</th>
+                                        <th class="text-center">STATUT</th>
+                                        <th class="text-center">ACTIONS</th>
                                     </tr>
-                                @endforeach
-                            </tbody>
+                                </thead>
+                                <tbody>
+                                    @foreach ($tasks as $task)
+                                        <tr>
+                                            <td>{{ ucfirst($task->title) }}</td>
+                                            <td>{{ $task->description }}</td>
+                                            <td class="text-center">{{ date('d-m-Y, H:s:i', strtotime($task->created_at)) }}
+                                            </td>
+                                            <td class="text-center">
+                                                <span
+                                                    class="badge 
+                                        {{ $task->status === 'completed' ? 'bg-success' : 'bg-warning text-dark' }}">
+                                                    {{ $task->status === 'completed' ? 'Tâche terminée' : 'Tâche en attente' }}
+                                                </span>
+                                            </td>
+
+                                            <td class="text-center">
+                                                <a href="{{ route('tasks.edit', encryptData($task->id)) }}"
+                                                    class="btn btn-warning">Modifier</a>
+                                                @if ($task->status === 'completed')
+                                                    {{-- <span class="badge bg-success">Tâche complétée</span> --}}
+                                                @else
+                                                    <form action="{{ route('tasks.complete', $task) }}" method="POST"
+                                                        class="d-inline">
+                                                        @csrf
+                                                        @method('PUT')
+                                                        <button type="submit" class="btn btn-success btn-sm">Marquer comme
+                                                            complétée</button>
+                                                    </form>
+                                                @endif
+                                                <button type="button" class="btn btn-danger delete-task"
+                                                    data-id="{{ encryptData($task->id) }}"
+                                                    data-name="{{ $task->title }}">Supprimer</button>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                        </div>
                         </table>
                     </div>
                 </div>
@@ -122,6 +127,7 @@
             });
 
             $('.table').DataTable({
+                responsive: true,
                 paging: true,
                 searching: true,
                 ordering: true,
@@ -165,4 +171,3 @@
         });
     </script>
 @endsection
-
