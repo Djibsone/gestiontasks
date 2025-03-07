@@ -140,6 +140,18 @@ class TaskController extends Controller
         }
     }
 
+    /**
+     * Marque une tâche comme complétée.
+     *
+     * Cette méthode autorise l'utilisateur à mettre à jour la tâche et modifie son statut en "completed".
+     * Elle renvoie l'utilisateur au tableau de bord des tâches avec un message de succès.
+     * En cas d'erreur, elle renvoie l'utilisateur à la page précédente avec un message d'erreur.
+     *
+     * @param \App\Models\Task $task La tâche à marquer comme complétée.
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+
     public function complete(Task $task)
     {
         try {
