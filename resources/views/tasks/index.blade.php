@@ -131,7 +131,7 @@
                 searching: true,
                 ordering: true,
                 order: [
-                    [0, 'asc']
+                    [2, 'desc']
                 ],
                 pageLength: 10,
                 language: {
