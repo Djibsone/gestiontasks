@@ -40,7 +40,7 @@ class RequestTask extends FormRequest
             'description.regex' => 'La description de la tâche ne peut contenir que des lettres, des espaces et des tirets.',
             'status.required' => 'Le statut est requis.',
             'status.string' => 'Le statut doit être une chaîne de caractères.',
-            'status.in' => 'Le statut doit être "pending" ou "completed".',
+            'status.in' => 'Le statut doit être valide.',
         ];
     }
 }
