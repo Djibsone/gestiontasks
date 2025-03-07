@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <h5>Êtes-vous sûr de vouloir <span class="text text-lowercase"></span> <span class="text-danger"
+                    <h5>Êtes-vous sûr de vouloir supprimer <span class="text text-lowercase"></span> <span class="text-danger"
                             id="delete-task-name"></span> ?</h5>
                     <p class="text-danger my-3 text-center"> Cette action est irréversible !</p>
                 </div>
