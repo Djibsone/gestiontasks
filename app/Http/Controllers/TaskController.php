@@ -25,10 +25,9 @@ class TaskController extends Controller
     }
 
     /**
-     * Affiche le tableau de bord des tâches.
+     * Affiche le formulaire de création de tâches.
      *
-     * Cette méthode rend la vue du tableau de bord des tâches, qui contient un tableau du
-     * Les tâches de l'utilisateur authentifiées.Les tâches sont commandées par la date de création descendante.
+     * Cette méthode rend la vue du formulaire de création de tâches. Elle est accessible uniquement si l'utilisateur est authentifié. Elle renvoie la vue "tasks.show".
      *
      * @return \Illuminate\View\View
      */
@@ -38,15 +37,15 @@ class TaskController extends Controller
     }
 
     /**
-     * Store a newly created task in the database.
+     * Stockez une tâche nouvellement créée dans la base de données.
      *
      * @param  \App\Http\Requests\RequestTask  $request
      * @return \Illuminate\Http\RedirectResponse
      *
-     * This method validates the incoming request data and creates a new task
-     * associated with the authenticated user. On success, it redirects to the
-     * tasks dashboard with a success message. If an exception occurs, it redirects
-     * back with an error message.
+     * Cette méthode valide les données de la demande entrante et crée une nouvelle tâche
+     * associé à l'utilisateur authentifié.Sur le succès, il redirige vers le
+     * Tâches Tableau de bord avec un message de réussite.Si une exception se produit, elle redirige
+     * Retour avec un message d'erreur.
      */
 
     public function store(RequestTask $request)
